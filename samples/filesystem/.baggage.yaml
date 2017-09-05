@@ -1,6 +1,8 @@
-tags:
+keys:
   - sample-filesystem-$(openssl sha1 < package.json)-$(openssl sha1 < yarn.lock)
   - sample-filesystem-$(openssl sha1 < package.json)
-  - sample-filesystem-$()
+  - sample-filesystem-$(git branch --format '%(refname)')
 
+storage:
+  - filesystem: /var/tmp/baggage-sample-filesystem-storage
 

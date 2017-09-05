@@ -1,5 +1,5 @@
 {
-  "name": "dredge-sample-filesystem",
+  "name": "baggage-sample-filesystem",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",

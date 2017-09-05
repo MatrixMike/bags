@@ -1,18 +1,17 @@
-# dredge
+# baggage
 
-Dredges up cached files when you need them.
+Gives you your cached files when you need them.
 
-You can dredge up files from your local filesystem, outside your docker container, or even from a remote object store such as Amazon S3.
+You can cache files to your local filesystem, outside your docker container, or even to a remote object store such as Amazon S3.
 
 # Usage
 
-Dredge is typically used during a software build when you need to quickly restore a bunch of files based on some criteria - such as the checksum of your dependencies.
+baggage is typically used during a software build when you need to quickly restore a bunch of files based on some criteria - such as the checksum of your dependencies.
 
-Step 1. Define your criteria in your `.dredge.yaml` file:
-
-    
-        
-    
-
+Step 1. Define your criteria in your `.baggage.yaml` file
+Step 2. Your build process (In a Makefile, or wherever) should look like:
+    - Run `baggage unpack` to attempt to restore your cached files
+    - Run whatever you need to, to build your files
+    - Run `baggage pack` to stow away your files into the cache for the next time.
 
 # Installation
