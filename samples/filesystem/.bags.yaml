@@ -4,5 +4,4 @@ keys:
   - sample-filesystem-$(git branch --format '%(refname)')
 
 storage:
-  - filesystem: /var/tmp/baggage-sample-filesystem-storage
-
+  - filesystem: /var/tmp/bags-sample-filesystem-storage
